@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "82:82"
+    environment:
+      - SQLALCHEMY_DATABASE_URI=mysql+pymysql://root:test321@db:3306/mydatabase
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: test321
+      MYSQL_DATABASE: mydatabase
+      #MYSQL_USER: root
+      MYSQL_PASSWORD: test321
+    ports:
+      - "3306:3306"
+
