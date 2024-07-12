@@ -18,4 +18,10 @@ services:
       MYSQL_PASSWORD: test321
     ports:
       - "3306:3306"
+    volumes:
+        - sddb_data:/var/lib/mysql
+volumes:
+    web_data:
+    sddb_data:   
+
 

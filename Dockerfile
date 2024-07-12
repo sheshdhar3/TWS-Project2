@@ -10,6 +10,5 @@ COPY . /SD/
 
 EXPOSE 82
 
-CMD ["python", "app.py"] 
-
+CMD ["python", "app.py"]
 
